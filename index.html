@@ -223,7 +223,7 @@
     <section id="works">
       <div class="projects">
         <h2 class="h2-of-projects">Check out My Projects</h2>
-        <div class="row">
+        <div class="row" style="margin-right: 0%">
           <div class="col-lg-6">
             <h3 class="h3-of-projects"><span>TinDog</span></h3>
             <p class="p-projects">
@@ -255,42 +255,30 @@
           Have a job for me? Want to invite me to an interview? You can give me
           a shout by email or by using the contact form below.
         </p>
+        <p
+          style="color: red; font-weight: bold; font-size: 1.2rem"
+          class="notice"
+        >
+          Please make sure that you fill all the fields
+        </p>
 
-        <fieldset class="details">
-          <label class="det">Name:</label>
-          <input class="box" type="text" />
-
-          <div>
-            <label class="det">Email:</label>
-            <input class="box" type="text" />
-          </div>
-          <div>
-            <label class="det">Subject:</label>
-            <input class="box" type="text" />
-          </div>
-          <div>
-            <label class="det">Message:</label>
+        <div class="contacts">
+          <form onsubmit="sendEmail(); reset(); return false">
+            <input type="text" id="name" placeholder="Your Name" required />
+            <input type="email" id="email" placeholder="Your Email" required />
+            <input type="text" id="phone" placeholder="Phone no." required />
             <textarea
-              name=""
-              id=""
-              cols="50"
-              rows="13"
-              style="width: 30%"
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+              placeholder="Your Message"
             ></textarea>
-          </div>
-          <div>
-            <button class="btn-contact" id="sumbit">SUMBIT</button>
+            <button type="submit" class="btn-contact" id="sumbitt">
+              SUMBIT
+            </button>
             <button class="btn-contact" id="clear">CLEAR</button>
-          </div>
-        </fieldset>
-        <div class="my-info">
-          <h2 class="h2-of-info">Contact Me</h2>
-          <p class="p-info">
-            Aviv Asulin <br />
-            Ofakim <br />
-            053-777-8347 <br />
-            Avivasulin1211@gmail.com
-          </p>
+          </form>
         </div>
       </div>
     </section>
@@ -352,7 +340,28 @@
         </nav>
       </div>
     </section>
-
     <script src="main.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+      function sendEmail() {
+        Email.send({
+          Host: "smtp.gmail.com",
+          Username: "avivasulin1211@gmail.com",
+          Password: "jxhavylbcfeprndu",
+          To: "avivasulin1211@gmail.com",
+          From: document.getElementById("email").value,
+          Subject: "New Contact",
+          Body:
+            "Name: " +
+            document.getElementById("name").value +
+            "<br> Email: " +
+            document.getElementById("email").value +
+            "<br> Phone no: " +
+            document.getElementById("phone").value +
+            "<br> Message: " +
+            document.getElementById("message").value,
+        }).then((message) => alert("Message sent to me , Thank you!"));
+      }
+    </script>
   </body>
 </html>

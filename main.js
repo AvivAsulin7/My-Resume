@@ -5,11 +5,7 @@ function clear_field() {
   text.value = "";
 }
 
-const b = document.querySelector("button");
+const b = document.querySelector("#clear");
 b.addEventListener("click", clear_field);
 
-// let btn = document.querySelector("button");
-// let i = document.querySelectorAll("input");
-// btn.addEventListener("click", () => {
-//   i.forEach((input) => (input.value = ""));
-// });
+// **************************************************
