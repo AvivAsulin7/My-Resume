@@ -107,6 +107,10 @@ font-weight: 700;
 
   /* SECTION EDUCATION */
 
+  .row {
+      margin-right: 0%;
+  }
+
   #Resume {
       background-color:#222831;
       color: #fff;
