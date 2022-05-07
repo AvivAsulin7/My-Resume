@@ -156,6 +156,12 @@ text-align: center;
 padding-bottom: 7%;
 }
 
+.name {
+    border-bottom: 2px solid #D89216;
+    padding-bottom: 0.5rem;
+    line-height: 2.5rem;
+}
+
 .h2-of-projects {
     padding: 3% 0;
     font-size: 2.5rem
@@ -163,9 +169,6 @@ padding-bottom: 7%;
 
 .h3-of-projects {
     margin: 8% 42% 3%;
-    border-bottom: 2px solid #D89216;
-    padding-bottom: 0.5rem;
-    width: 10rem;
 }
 
 .links {
@@ -414,10 +417,14 @@ padding: 0 2rem;
 .me-img {
     margin: 6rem;
 }
+
+.p-about{
+    width: 24rem;
+}
   /* SECTION EDUCATION */
 
   #Resume {
-      padding: 0 7% 5%;
+      padding: 0 7% 10%;
   }
 
   .h2-of-resume {
@@ -438,25 +445,26 @@ padding: 5% 3% 7%;
     text-align: center;
 }
 
-.h3-of-projects {
-    margin-left: 9rem;
-}
 
     /* SECTION WORKS */
 
+    .contact-me {
+        padding-top: 5rem;
+    }
+
 .p-contact {
-    margin-bottom: 7%;
+    margin: 5% 4% 7%;
 }
 
 
 .footer-social {
     list-style: none;
-    margin-right: 5rem;
+    margin-right: 2rem;
     margin-bottom: 3rem;
 }
 
 .footer-li-icons {
-    margin-left: 3rem;
+    margin-left: 1rem;
     display: inline;
 }
 
