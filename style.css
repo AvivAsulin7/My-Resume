@@ -108,7 +108,8 @@ font-weight: 700;
   /* SECTION EDUCATION */
 
   .row {
-      margin-right: 0%;
+      margin-right: 0;
+      margin-left: 0;
   }
 
   #Resume {
